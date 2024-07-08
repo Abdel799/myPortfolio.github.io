@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Abdelrahman's Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+       
+        <nav>
+            <ul class="nav_bar">
+                <li> <a href="#about">About Me</a> </li>
+                <li> <a href="#projects">Projects</a> </li>
+              <!--  <li>Experience</li> -->
+                <li> <a href="#contact">Contact</a> </li>
+            </ul>
+        </nav>
+
+        <div class="title-page">
+            <h1>Abdelrahman Abdelaal</h1>
+        </div>
+
+        <section class="about" id="about">
+
+            <div class="about-me" id="about-me">
+
+                <h1 class="intro">About Me</h1>
+                <img src="pictures/profile.jpg" width="170" height="200">
+                <p class="info">Hello, my name is Abdelrahman Abdelaal, thank you for taking the time to browse my portfolio! As a second-year computer science co-op student at Toronto Metropolitan University, I am
+                    enthusiastic about contributing to innovative projects,
+                    gaining hands-on experience, and further developing
+                    my expertise in the computer science industry. Below you'll find some projects I've been working really hard on. Enjoy!</p>
+
+            </div>
+
+        </section>
+
+        
+        <div class="projects" id="projects">
+
+            <h1 class="project-intro">My Projects</h1>
+
+
+            <div class="specific-proj">
+
+                <div class="p">
+                    <h3>Notes App</h3>
+                    <img src="pictures/notesApp.png">
+                    <p>Skills: HTML, CSS, JavaScript</p>
+
+                    <div class="buttons">
+
+                        <a href = "https://abdel799.github.io/notesAPP.github.io/" target="_blank">
+                            <button class="liveBtn">Live</button>
+                        </a>
+                        
+                        <a href = "https://github.com/Abdel799/notesAPP.github.io" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="p">
+                    <h3>Wordle Program</h3>
+                    <img src="pictures/wordle.png">
+                    <p>Skills: Python</p>
+
+                    <div class="buttons">
+
+                        <a href="https://github.com/Abdel799/python-wordle.github.io" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="p">
+                    <h3>Image Search App</h3>
+                    <img src="pictures/image-search.png">
+                    <p>Skills: HTML, CSS, JavaScript</p>
+
+                    <div class="buttons">
+
+                        <a href="https://abdel799.github.io/image-search.github.io/" target="_blank">
+                            <button class="liveBtn">Live</button>
+                        </a>
+                        
+                        <a href="https://github.com/Abdel799/image-search.github.io" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                    
+                    </div>
+                </div>
+
+                <div class="p">
+                    <h3>Music Player App</h3>
+                    <img src="pictures/musicPlayer.png">
+                    <p>Skills: HTML, CSS, JavaScript</p>
+
+                    <div class="buttons">
+
+                        <a href="https://abdel799.github.io/music-player.github.io/" target="_blank">
+                            <button class="liveBtn">Live</button>
+                        </a>
+                        
+
+                        <a href="https://github.com/Abdel799/music-player.github.io" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="p">
+                    <h3>Dictionary App</h3>
+                    <img src="pictures/dictionary.png">
+                    <p>Skills: HTML, CSS, JavaScript</p>
+
+                    <div class="buttons">
+
+                        <a href="https://abdel799.github.io/dictionaryAPP.github.io/" target="_blank">
+                            <button class="liveBtn">Live</button>
+                        </a>
+                        
+
+                        <a href="https://github.com/Abdel799/dictionaryAPP.github.io" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <div class="p">
+                    <h3>Calculator App</h3>
+
+                    <img src="pictures/calculator.png">
+                    <p>Skills: Java, Java Swing</p>
+
+                    <div class="buttons">
+
+                        <a href="https://github.com/Abdel799/Calculator.github.io/tree/main" target="_blank">
+                            <button class="codeBtn">Code</button>
+                        </a>
+                        
+                    </div>
+                   
+                </div>
+                
+            </div>
+                
+        </div>
+
+        <div class="contact" id="contact">
+            <br>
+            <br>
+            <h1>Contact Me</h1>
+
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/abdelrahman-abdelaal-6714752a6" target="_blank"> <i class="fa fa-linkedin-square" style="font-size:48px;color:black"></i> </a>
+                <h2>Email: Abdelrahman.abd@hotmail.com</h2>
+            </div>
+
+        </div>
+       
+        <script>
+            document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+            top: targetElement.offsetTop - 50, // Adjust the offset for the fixed navbar height
+            behavior: 'smooth'
+            });
+
+        // Use a timeout to remove the hash after the scrolling
+            setTimeout(() => {
+            history.pushState(null, '', window.location.pathname);
+                }, 0);
+            });
+});
+        </script> 
+        
+    </body>
+
+   
+
+</html>

@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+nav{
+    border: 1px solid black;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+}
+
+.nav_bar{
+    display: flex;
+    /*margin: 0 auto;*/
+    
+}
+
+
+.nav_bar li{
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+   list-style-type: none;
+   cursor: pointer;
+   
+}
+
+.nav_bar a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav_bar a:visited{
+    color: white;
+}
+
+
+.title-page{
+    position: relative;
+    /*top: 50px;*/
+    border: 1px solid black;
+    background-image: url("pictures/toronto.jpg");
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.title-page h1{
+    text-align: center;
+    
+    position: relative;
+    top: 320px;
+    color: #F0E68C;
+    font-weight: bold;
+    font-family: 'lato';
+    letter-spacing: 1px;
+}
+
+
+.about{
+    display:flex; 
+    justify-content: center; /*for vertical*/
+    align-items: center;    /*for horizontal*/
+    padding:90px 0px 100px;
+}
+
+
+
+.about-me{
+    position: relative;
+    top: 10px;
+    text-align: center;
+    
+}
+
+.intro{
+    margin-bottom: 30px;
+}
+
+p.info{
+    margin-top: 15px; 
+    width: 700px; 
+    height: auto;
+    font-family:'Roboto Slab', serif; 
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+img{
+    border-radius: 30%;
+}
+
+h1.intro{
+    font-family: 'Roboto Slab';
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.project-intro{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.projects{
+    border: 1px solid 	#A0A0A0;
+    height: 1200px;
+    background-color: 	#A0A0A0;
+    padding: 15px;
+}
+
+.p{
+    width: 100%;
+    height: 100%;
+    background-color: #F9F7F0;
+    border: 1px solid #e3eaed;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+    margin-top: 20px;
+}
+
+.p h3{
+    margin-top: 5px;
+}
+
+.specific-proj{
+    /*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+    margin-top: 50px;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(min(350px,100%), 1fr));*/
+    grid-template-columns: repeat(3, 1fr); /* Three columns in full screen */
+    grid-auto-columns: auto;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    height: auto;
+    
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 13px 23px;
+    cursor: pointer;
+    /*transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;*/
+    background: #DE3163;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover{
+    
+    background-color: #00308F;
+}
+
+.buttons{
+    margin-top: 15px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.codeBtn{
+    margin-left: 5px;
+}
+
+.liveBtn{
+    margin-right: 5px;
+}
+
+.p p{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact{
+    
+    text-align: center;
+    height: 250px;
+    background-color: #F5F5DC;
+}
+
+.contact-info{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.contact-info h2{
+    padding: 20px;
+}
+
+.contact-info a{
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.contact-info a:hover{
+    color: red;
+}
+
+
+
+@media (max-width: 400px) {
+    .specific-proj {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .projects{
+        height: 2000px;
+    }
+
+    .specific-proj {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    
+}
+
+@media (max-width: 1100px){
+    .projects{
+        height: 1600px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .projects{
+        height: 3900px;
+    }
+
+    .specific-proj {
+        grid-template-columns: 1fr;
+    }
+
+    p.info{
+        width: 500px;
+    }
+}
+
+
+
+@media (max-width: 700px){
+    .projects{
+        height: 3400px;
+    }
+
+    p.info{
+        width: 400px;
+    }
+}
+
+@media (max-width: 500px){
+    .projects{
+        height: 2700px;
+    }
+}
+    
