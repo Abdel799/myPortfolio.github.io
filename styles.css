@@ -115,9 +115,10 @@ h1.intro{
 }
 
 .projects{
+    /*#A0A0A0*/
     border: 1px solid 	#C0C0C0;
-    height: 1200px;
-    background-color: 	#C0C0C0;
+    height: 1150px;
+    background-color: #C0C0C0;
     padding: 15px;
 }
 
@@ -235,12 +236,14 @@ button:hover{
         grid-template-columns: 1fr;
     }
 
+    
+
 }
 
 @media (max-width: 1280px) {
 
     .projects{
-        height: 2000px;
+        height: 1800px;
     }
 
     .specific-proj {
@@ -259,7 +262,7 @@ button:hover{
 @media (max-width: 850px) {
 
     .projects{
-        height: 3900px;
+        height: 3500px;
     }
 
     .specific-proj {
@@ -275,7 +278,7 @@ button:hover{
 
 @media (max-width: 700px){
     .projects{
-        height: 3400px;
+        height: 3100px;
     }
 
     p.info{
@@ -285,7 +288,7 @@ button:hover{
 
 @media (max-width: 500px){
     .projects{
-        height: 2700px;
+        height: 2750px;
     }
 }
-    
+      
